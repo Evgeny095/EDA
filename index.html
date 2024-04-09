@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <meta name="description" content="" />
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <script defer src="./js/main.min.js"></script>
+    <title>EDA</title>
+</head>
+
+<body>
+    <div class="modal-window__wrapper modal-window__wrapper_hidden">
+        <div class="modal-window modal-window_hidden">
+            <div class="modal-window__text-container">
+                <p class="modal-window__text"></p>
+            </div>
+            <div id="modal-window_img-container" class="modal-window_img-container">
+                <img src="./img/icons/ok-min.png" alt="ok" class="modal-window__img">
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="menu_btn">
+            <img src="./img/icons/menu_btn-icon-min.png" alt="menu open" class="menu_btn__icon">
+        </div>
+        <header id="header" class="header header_postiton content_center ">
+            <form action="#" class="search-form">
+                <button class="button__img"><img src="./img/icons/header_search-min.png" alt="search icon"
+                        class="search-form__icon icon"></button>
+                <input type="text" class="search-form__input" maxlength="50">
+            </form>
+            <div class="header__panel">
+                <button class="button__img notifications__btn header__panel__button"><img
+                        src="./img/icons/header_notifications-min.png" alt="notifications"
+                        class="notifications__img icon"></button>
+                <button class="button__img header__panel__button btn_lk"><img
+                        src="./img/icons/header_user-profile-min.png" alt="notifications"
+                        class="notifications__img icon"></button>
+            </div>
+        </header>
+        <nav id="nav" class="nav nav_color nav_transform">
+            <div class="nav__wrapper">
+                <img class="logo nav__logo_position" src="./img/icons/logo-min.png" alt="Logo Еда">
+                <nav class="main-nav">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__el">
+                            <a href="#header" class="main-nav__link js-scroll"> поиск </a>
+                        </li>
+                        <li class="main-nav__el">
+                            <a href="#selection" class="main-nav__link js-scroll">Подбор рецептов</a>
+                        </li>
+                        <li class="main-nav__el">
+                            <a href="#recipes" class="main-nav__link js-scroll">Рецепты</a>
+                        </li>
+                        <li class="main-nav__el">
+                            <a href="#compilation" class="main-nav__link js-scroll">Горячая подборка</a>
+                        </li>
+                        <li class="main-nav__el ">
+                            <a href="#authors" class="main-nav__link js-scroll">Авторы</a>
+                        </li>
+                        <li class="main-nav__el">
+                            <a href="#subscription" class="main-nav__link js-scroll">Подписка</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="form_toggle">
+                    <div class="form_toggle-item item-1">
+                        <input id="fid-1" type="radio" name="radio" value="off" checked>
+                        <label for="fid-1">RU</label>
+                    </div>
+                    <div class="form_toggle-item item-2">
+                        <input id="fid-2" type="radio" name="radio" value="on">
+                        <label for="fid-2">EN</label>
+                    </div>
+                </div>
+                <div class="social social_position">
+                    <a class="social__link" href="#!">
+                        <img src="./img/icons/vk_icon-min.png" alt="vk" class="social__icon">
+                    </a>
+                    <a class="social__link" href="#!">
+                        <img src="./img/icons/facebook_icon-min.png" alt="facebook" class="social__icon">
+                    </a>
+                    <a class="social__link" href="#!">
+                        <img src="./img/icons/instagram_icon-min.png" alt="instagram" class="social__icon">
+                    </a>
+                    <a class="social__link" href="#!">
+                        <img src="./img/icons/google_icon-min.png" alt="google" class="social__icon">
+                    </a>
+                </div>
+                <div class="nav__close">
+                    <img src="./img/icons/close.svg" alt="close menu" class="nav__close-img">
+                </div>
+
+            </div>
+        </nav>
+        <main id="main" class="main content_center ">
+            <div class="delimiter delimiter_position">
+                <img src="./img/icons/delimiter-min.png" alt="Еда - сайт о еде">
+            </div>
+            <!-- Selection start -->
+            <section id="selection" class="selection">
+                <h1 class="selection__title title">Подбор рецептов</h1>
+                <form action="#!" class="select-form select-form_position">
+                    <div class="select-form__selecteds">
+                        <select required name="sel-varyti" id="sel-varyti" class="sel-varyti select-form__standart">
+                            <option value="" selected>Разновидность рецептов</option>
+                            <option value="Любые">Любые</option>
+                            <option value="Выпечка и десерты">Выпечка и десерты</option>
+                            <option value="Салаты">Салаты</option>
+                            <option value="Супы">Супы</option>
+                            <option value="Гриль">Гриль</option>
+                            <option value="Гарниры">Гарниры</option>
+                            <option value="Мясные блюда">Мясные блюда</option>
+                        </select>
+                        <!--  -->
+                        <select required name="dish" id="sel-dish" class="sel-dish select-form__standart">
+                            <option value="" selected>Блюдо</option>
+                            <option value="Любое">Любое</option>
+                            <option value="Горячее">Горячее</option>
+                            <option value="Закуски">Закуски</option>
+                            <option value="Холодное">Холодное</option>
+                            <option value="Острое">Острое</option>
+                            <option value="Сладости">Сладости</option>
+                        </select>
+                        <!--  -->
+                        <select required name="dish" id="sel-kitchen" class="sel-kitchen select-form__standart">
+                            <option value="" selected>Кухня</option>
+                            <option value="Любая">Любая</option>
+                            <option value="Восточная">Восточная</option>
+                            <option value="Западная">Западная</option>
+                            <option value="Авторская">Авторская</option>
+                            <option value="Азиатская">Азиатская</option>
+                            <option value="Веганская">Веганская</option>
+                        </select>
+                        <!--  -->
+                        <select required name="menu" id="sel-menu" class="sel-menu select-form__standart">
+                            <option value="" selected>Любое меню</option>
+                            <option value="Любые">Любые</option>
+                            <option value="Завтрак">Завтрак</option>
+                            <option value="Обед">Обед</option>
+                            <option value="Ужин">Ужин</option>
+                            <option value="Праздничное">Праздничное</option>
+                            <option value="Напитки">Напитки</option>
+                        </select>
+                        <!--  -->
+                        <select required name="menu" id="sel-difficulty" class="sel-difficulty select-form__standart">
+                            <option value="" selected>Сложность</option>
+                            <option value="Любая">Любая</option>
+                            <option value="Очень легко">Очень легко</option>
+                            <option value="Легко">Легко</option>
+                            <option value="Сложно">Сложно</option>
+                            <option value="Профи">Профи</option>
+                        </select>
+                    </div>
+                    <!--  -->
+                    <div class="select-form__params">
+                        <input class="select-form__params-input" maxlength="100" type="text"
+                            placeholder="Ингредиенты, детали">
+                        <input type="submit" class="select-form__params-submit">
+                    </div>
+                </form>
+                <div class="selection__cards">
+                    <div class="selection__card selection__card-1">
+                        <img src="./img/selection_img_1-min.jpg" alt="Куриные ножки на гриле"
+                            class="selection__card-img">
+                    </div>
+                    <div class="selection__card selection__card-2">
+                        <img src="./img/selection_img_2-min.jpg" alt="7 лучших рецептов недели"
+                            class="selection__card-img">
+                    </div>
+                    <div class="selection__card selection__card-3">
+                        <img src="./img/selection_img_3-min.jpg" alt="Как приготовить пирог в одной посуде 5 рецептов"
+                            class="selection__card-img">
+                    </div>
+                    <div class="selection__card selection__card-4">
+                        <img src="./img/selection_img_4-min.jpg" alt="Как приготовить сырный торт с овощами"
+                            class="selection__card-img">
+                    </div>
+                    <div class="selection__card selection__card-5">
+                        <img src="./img/selection_img_5-min.jpg" alt="10 простых напитков в жару"
+                            class="selection__card-img">
+                    </div>
+                    <div class="selection__card selection__card-6">
+                        <img src="./img/selection_img_6-min.jpg" alt="Что такое мед ?" class="selection__card-img">
+                    </div>
+                    <div class="selection__card selection__card-7">
+                        <img src="./img/selection_img_7-min.jpg" alt="Как правильно замесить дрожжевое тесто"
+                            class="selection__card-img">
+                    </div>
+                    <div class="selection__card selection__card-8">
+                        <img src="./img/selection_img_8-min.jpg" alt="Человек, который делает лучшие метболы в Бельгии"
+                            class="selection__card-img">
+                    </div>
+                </div>
+            </section>
+            <!-- Selection end -->
+            <div class="delimiter delimiter_position">
+                <img src="./img/icons/delimiter-min.png" alt="Еда - сайт о еде">
+            </div>
+            <!-- Recipes start -->
+            <section id="recipes" class="recipes">
+                <h2 class="title recipes__title">Рецепты</h2>
+                <!-- Radio button -->
+                <div class="recipes__swith-container">
+                    <div class="recipes-radio-group">
+                        <div class="recipes-radio-group__item">
+                            <input id="recipes-radio-1" type="radio" name="recipes-radio" value="1" checked>
+                            <label for="recipes-radio-1">Новые рецепты</label>
+                        </div>
+                        <div class="recipes-radio-group__item">
+                            <input id="recipes-radio-2" type="radio" name="recipes-radio" value="2">
+                            <label for="recipes-radio-2">Популярные</label>
+                        </div>
+                        <div class="recipes-radio-group__item">
+                            <input id="recipes-radio-3" type="radio" name="recipes-radio" value="3">
+                            <label for="recipes-radio-3">Рекомендуем</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="recipes__cards recipes__cards_order">
+                    <div class="recipes__card recipes__card-1">
+                        <div class="recipes__img-container">
+                            <img class="recipes__img" src="./img/recipes-img-1-min.jpg"
+                                alt="Утиные ножки с овощами и грудинкой">
+                            <div class="recipes__img-context">
+                                <div class="recipes__author">
+                                    <img src="./img/authors/recipes_author_1-min.png" alt="Daria Fedorenko"
+                                        class="recipes__author-ico">
+                                    <p class="recipes__author-name">Daria Fedorenko</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recipes__card-context">
+                            <h6 class="recipes__card-title">Утиные ножки с овощами и грудинкой</h6>
+                            <div class="card-haracteristic">
+                                <p class="card-haracteristic__time card-haracteristic__item">135 мин</p>
+                                <p class="card-haracteristic__dificulty card-haracteristic__item">Сложно</p>
+                                <p class="card-haracteristic__call card-haracteristic__item">125 ккал</p>
+                            </div>
+                            <p class="recipes__card-about">лук репчатый, морковь, редька, перец сладкий, помидоры,
+                                томат-пюре, картофель, чеснок, бульон мясной,соль, перец чёрный, зелень петрушки...</p>
+                            <div class="recipes__card-lastline">
+                                <span class="recipes__likes">16</span>
+                                <div class="recipes__author-social">
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/vk_1472-min.png" alt="vk"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/facebook_1470-min.png" alt="facebook"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/odnoklassniki_ico-min.png" alt="odnoklassniki"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipes__card recipes__card-2">
+                        <div class="recipes__img-container">
+                            <img class="recipes__img" src="./img/recipes_img_2-min.jpg"
+                                alt="Утиные ножки с овощами и грудинкой">
+                            <div class="recipes__img-context">
+                                <div class="recipes__author">
+                                    <img src="./img/authors/recipes_author_1-min.png" alt="Daria Fedorenko"
+                                        class="recipes__author-ico">
+                                    <p class="recipes__author-name">Daria Fedorenko</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recipes__card-context">
+                            <h6 class="recipes__card-title">Салат из свеклы с козьим сыром и медовой заправкой</h6>
+                            <div class="card-haracteristic">
+                                <p class="card-haracteristic__time card-haracteristic__item">35 мин</p>
+                                <p class="card-haracteristic__dificulty card-haracteristic__item">Сложно</p>
+                                <p class="card-haracteristic__call card-haracteristic__item">125 ккал</p>
+                            </div>
+                            <p class="recipes__card-about">говядина, масло топлёное, лук репчатый, морковь, редька,
+                                перец сладкий, помидоры, томат-пюре, картофель...</p>
+                            <div class="recipes__card-lastline">
+                                <span class="recipes__likes">45</span>
+                                <div class="recipes__author-social">
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/vk_1472-min.png" alt="vk"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/facebook_1470-min.png" alt="facebook"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/odnoklassniki_ico-min.png" alt="odnoklassniki"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipes__card recipes__card-3">
+                        <div class="recipes__img-container">
+                            <img class="recipes__img" src="./img/recipes_img_3-min.jpg"
+                                alt="Американский тыквенный пирог с корицей">
+                            <div class="recipes__img-context">
+                                <div class="recipes__author">
+                                    <img src="./img/authors/recipes_author_1-min.png" alt="Daria Fedorenko"
+                                        class="recipes__author-ico">
+                                    <p class="recipes__author-name">Daria Fedorenko</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recipes__card-context">
+                            <h6 class="recipes__card-title">Американский тыквенный пирог с корицей</h6>
+                            <div class="card-haracteristic">
+                                <p class="card-haracteristic__time card-haracteristic__item">240 мин</p>
+                                <p class="card-haracteristic__dificulty card-haracteristic__item">Сложно</p>
+                                <p class="card-haracteristic__call card-haracteristic__item">125 ккал</p>
+                            </div>
+                            <p class="recipes__card-about">говядина, масло топлёное, лук репчатый, морковь, редька,
+                                перец сладкий, помидоры, томат-пюре, картофель, чеснок, бульон мясной, соль, перец
+                                чёрный...</p>
+                            <div class="recipes__card-lastline">
+                                <span class="recipes__likes">18</span>
+                                <div class="recipes__author-social">
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/vk_1472-min.png" alt="vk"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/facebook_1470-min.png" alt="facebook"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/odnoklassniki_ico-min.png" alt="odnoklassniki"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipes__card recipes__card-4">
+                        <div class="recipes__img-container">
+                            <img class="recipes__img" src="./img/recipes_img_4-min.jpg"
+                                alt="Салат «Цезарь» традиционный">
+                            <div class="recipes__img-context">
+                                <div class="recipes__author">
+                                    <img src="./img/authors/recipes_author_1-min.png" alt="Daria Fedorenko"
+                                        class="recipes__author-ico">
+                                    <p class="recipes__author-name">Daria Fedorenko</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recipes__card-context">
+                            <h6 class="recipes__card-title">Салат «Цезарь» традиционный</h6>
+                            <div class="card-haracteristic">
+                                <p class="card-haracteristic__time card-haracteristic__item">107 мин</p>
+                                <p class="card-haracteristic__dificulty card-haracteristic__item">Сложно</p>
+                                <p class="card-haracteristic__call card-haracteristic__item">105 ккал</p>
+                            </div>
+                            <p class="recipes__card-about">говядина, масло топлёное, лук репчатый, морковь, редька,
+                                перец сладкий, помидоры, томат-пюре, картофель, чеснок, бульон мясной, соль, перец
+                                чёрный...</p>
+                            <div class="recipes__card-lastline">
+                                <span class="recipes__likes">25</span>
+                                <div class="recipes__author-social">
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/vk_1472-min.png" alt="vk"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/facebook_1470-min.png" alt="facebook"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/odnoklassniki_ico-min.png" alt="odnoklassniki"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipes__card recipes__card-5">
+                        <div class="recipes__img-container">
+                            <img class="recipes__img" src="./img/recipes_img_5-min.jpg"
+                                alt="Соте из брюссельской капусты с варено-копченым окороком">
+                            <div class="recipes__img-context">
+                                <div class="recipes__author">
+                                    <img src="./img/authors/recipes_author_1-min.png" alt="Daria Fedorenko"
+                                        class="recipes__author-ico">
+                                    <p class="recipes__author-name">Daria Fedorenko</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recipes__card-context">
+                            <h6 class="recipes__card-title">Соте из брюссельской капусты с варено-копченым окороком</h6>
+                            <div class="card-haracteristic">
+                                <p class="card-haracteristic__time card-haracteristic__item">45 мин</p>
+                                <p class="card-haracteristic__dificulty card-haracteristic__item">Сложно</p>
+                                <p class="card-haracteristic__call card-haracteristic__item">98 ккал</p>
+                            </div>
+                            <p class="recipes__card-about">говядина, масло топлёное, лук репчатый, морковь, редька,
+                                перец сладкий, помидоры, томат-пюре, картофель, чеснок, бульон мясной, соль, перец
+                                чёрный, зелень петрушки......</p>
+                            <div class="recipes__card-lastline">
+                                <span class="recipes__likes">12</span>
+                                <div class="recipes__author-social">
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/vk_1472-min.png" alt="vk"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/facebook_1470-min.png" alt="facebook"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/odnoklassniki_ico-min.png" alt="odnoklassniki"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipes__card recipes__card-6">
+                        <div class="recipes__img-container">
+                            <img class="recipes__img" src="./img/recipes_img_6-min.jpg"
+                                alt="Жареные баклажаны с помидорами">
+                            <div class="recipes__img-context">
+                                <div class="recipes__author">
+                                    <img src="./img/authors/recipes_author_1-min.png" alt="Daria Fedorenko"
+                                        class="recipes__author-ico">
+                                    <p class="recipes__author-name">Daria Fedorenko</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recipes__card-context">
+                            <h6 class="recipes__card-title">Жареные баклажаны с помидорами</h6>
+                            <div class="card-haracteristic">
+                                <p class="card-haracteristic__time card-haracteristic__item">35 мин</p>
+                                <p class="card-haracteristic__dificulty card-haracteristic__item">Сложно</p>
+                                <p class="card-haracteristic__call card-haracteristic__item">128 ккал</p>
+                            </div>
+                            <p class="recipes__card-about">говядина, масло топлёное, лук репчатый, морковь, редька,
+                                перец сладкий, помидоры, томат-пюре, картофель......</p>
+                            <div class="recipes__card-lastline">
+                                <span class="recipes__likes">36</span>
+                                <div class="recipes__author-social">
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/vk_1472-min.png" alt="vk"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/facebook_1470-min.png" alt="facebook"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/odnoklassniki_ico-min.png" alt="odnoklassniki"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipes__card recipes__card-7">
+                        <div class="recipes__img-container">
+                            <img class="recipes__img" src="./img/recipes_img_7-min.jpg"
+                                alt="Печеночный торт с морковью и луком">
+                            <div class="recipes__img-context">
+                                <div class="recipes__author">
+                                    <img src="./img/authors/recipes_author_1-min.png" alt="Daria Fedorenko"
+                                        class="recipes__author-ico">
+                                    <p class="recipes__author-name">Daria Fedorenko</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recipes__card-context">
+                            <h6 class="recipes__card-title">Сливочный бутерброд</h6>
+                            <div class="card-haracteristic">
+                                <p class="card-haracteristic__time card-haracteristic__item">10 мин</p>
+                                <p class="card-haracteristic__dificulty card-haracteristic__item">Сложно</p>
+                                <p class="card-haracteristic__call card-haracteristic__item">25 ккал</p>
+                            </div>
+                            <p class="recipes__card-about">лук репчатый, морковь, редька, перец сладкий, помидоры,
+                                томат-пюре, картофель, чеснок, бульон мясной,соль, перец чёрный, зелень петрушки...</p>
+                            <div class="recipes__card-lastline">
+                                <span class="recipes__likes">13</span>
+                                <div class="recipes__author-social">
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/vk_1472-min.png" alt="vk"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/facebook_1470-min.png" alt="facebook"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/odnoklassniki_ico-min.png" alt="odnoklassniki"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipes__card recipes__card-8">
+                        <div class="recipes__img-container">
+                            <img class="recipes__img" src="./img/recipes_img_8-min.jpg"
+                                alt="Брюссельская капуста с белым соусом с сыром">
+                            <div class="recipes__img-context">
+                                <div class="recipes__author">
+                                    <img src="./img/authors/recipes_author_1-min.png" alt="Daria Fedorenko"
+                                        class="recipes__author-ico">
+                                    <p class="recipes__author-name">Daria Fedorenko</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recipes__card-context">
+                            <h6 class="recipes__card-title">Брюссельская капуста с белым соусом с сыром</h6>
+                            <div class="card-haracteristic">
+                                <p class="card-haracteristic__time card-haracteristic__item">120 мин</p>
+                                <p class="card-haracteristic__dificulty card-haracteristic__item">Сложно</p>
+                                <p class="card-haracteristic__call card-haracteristic__item">125 ккал</p>
+                            </div>
+                            <p class="recipes__card-about">говядина, масло топлёное, лук репчатый, морковь, редька,
+                                перец сладкий, помидоры, томат-пюре, картофель, чеснок, бульон мясной, соль, перец
+                                чёрный...</p>
+                            <div class="recipes__card-lastline">
+                                <span class="recipes__likes">19</span>
+                                <div class="recipes__author-social">
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/vk_1472-min.png" alt="vk"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/facebook_1470-min.png" alt="facebook"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/odnoklassniki_ico-min.png" alt="odnoklassniki"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipes__card recipes__card-9">
+                        <div class="recipes__img-container">
+                            <img class="recipes__img" src="./img/recipes_img_9-min.jpg"
+                                alt="Печеночный торт с морковью и луком">
+                            <div class="recipes__img-context">
+                                <div class="recipes__author">
+                                    <img src="./img/authors/recipes_author_1-min.png" alt="Daria Fedorenko"
+                                        class="recipes__author-ico">
+                                    <p class="recipes__author-name">Daria Fedorenko</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recipes__card-context">
+                            <h6 class="recipes__card-title">Печеночный торт с морковью и луком</h6>
+                            <div class="card-haracteristic">
+                                <p class="card-haracteristic__time card-haracteristic__item">210 мин</p>
+                                <p class="card-haracteristic__dificulty card-haracteristic__item">Сложно</p>
+                                <p class="card-haracteristic__call card-haracteristic__item">215 ккал</p>
+                            </div>
+                            <p class="recipes__card-about">Лук репчатый, морковь, редька, перец сладкий, помидоры,
+                                томат-пюре, картофель, чеснок, бульон мясной,соль, перец чёрный, зелень петрушки......
+                            </p>
+                            <div class="recipes__card-lastline">
+                                <span class="recipes__likes">54</span>
+                                <div class="recipes__author-social">
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/vk_1472-min.png" alt="vk"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/facebook_1470-min.png" alt="facebook"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/odnoklassniki_ico-min.png" alt="odnoklassniki"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recipes__card recipes__card-10">
+                        <div class="recipes__img-container">
+                            <img class="recipes__img" src="./img/recipes_img_10-min.jpg"
+                                alt="Классический крабовый салат с огурцом и мидиями">
+                            <div class="recipes__img-context">
+                                <div class="recipes__author">
+                                    <img src="./img/authors/recipes_author_1-min.png" alt="Daria Fedorenko"
+                                        class="recipes__author-ico">
+                                    <p class="recipes__author-name">Daria Fedorenko</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recipes__card-context">
+                            <h6 class="recipes__card-title">Классический крабовый салат с огурцом и мидиями</h6>
+                            <div class="card-haracteristic">
+                                <p class="card-haracteristic__time card-haracteristic__item">64 мин</p>
+                                <p class="card-haracteristic__dificulty card-haracteristic__item">Сложно</p>
+                                <p class="card-haracteristic__call card-haracteristic__item">148 ккал</p>
+                            </div>
+                            <p class="recipes__card-about">Говядина, масло топлёное, лук репчатый, морковь, редька,
+                                перец сладкий, помидоры, томат-пюре, картофель, чеснок, бульон мясной, соль, перец
+                                чёрный......</p>
+                            <div class="recipes__card-lastline">
+                                <span class="recipes__likes">36</span>
+                                <div class="recipes__author-social">
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/vk_1472-min.png" alt="vk"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/facebook_1470-min.png" alt="facebook"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                    <a class="recipes__author-social-icon" href="#!">
+                                        <img src="./img/icons/odnoklassniki_ico-min.png" alt="odnoklassniki"
+                                            class="recipes__author-social-icon-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Recipes end -->
+
+
+
+
+            <div class="delimiter delimiter_position">
+                <img src="./img/icons/delimiter-min.png" alt="Еда - сайт о еде">
+            </div>
+            <!-- Сompilation  start-->
+            <section id="compilation" class="compilation">
+                <h3 class="title">#ГорячаяПодборка</h3>
+                <div class="compilation__cards">
+                    <div class="compilation__card">
+                        <img src="./img/complection_img_1-min.jpg " alt="ererere" class="compilation__card-img">
+                    </div>
+                    <div class="compilation__card">
+                        <img src="./img/complection_img_2-min.jpg " alt="ererere" class="compilation__card-img">
+                    </div>
+                    <div class="compilation__card">
+                        <img src="./img/complection_img_3-min.jpg " alt="ererere" class="compilation__card-img">
+                    </div>
+                    <div class="compilation__card">
+                        <img src="./img/complection_img_4-min.jpg " alt="ererere" class="compilation__card-img">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Compilation end -->
+
+            <!-- Authors start -->
+            <article id="authors" class="authors">
+                <h4 class="title title__authors">Топ авторов</h4>
+                <div class="authors__persons">
+                    <div class="authors__person">
+                        <img src="./img/authors/author-1-min.png" alt="Иван Иванов" class="authors__img">
+                    </div>
+                    <div class="authors__person">
+                        <img src="./img/authors/author-2-min.png" alt="Иван Иванов" class="authors__img">
+                    </div>
+                    <div class="authors__person">
+                        <img src="./img/authors/author-3-min.png" alt="Иван Иванов" class="authors__img">
+                    </div>
+                    <div class="authors__person">
+                        <img src="./img/authors/author-4-min.png" alt="Иван Иванов" class="authors__img">
+                    </div>
+                    <div class="authors__person">
+                        <img src="./img/authors/author-5-min.png" alt="Иван Иванов" class="authors__img">
+                    </div>
+                    <div class="authors__person">
+                        <img src="./img/authors/author-6-min.png" alt="Иван Иванов" class="authors__img">
+                    </div>
+                    <div class="authors__person">
+                        <img src="./img/authors/author-7-min.png" alt="Иван Иванов" class="authors__img">
+                    </div>
+                    <div class="authors__person">
+                        <img src="./img/authors/author-8-min.png" alt="Иван Иванов" class="authors__img">
+                    </div>
+                    <div class="authors__person">
+                        <img src="./img/authors/author-9-min.png" alt="Иван Иванов" class="authors__img">
+                    </div>
+                    <div class="authors__person">
+                        <img src="./img/authors/author-7-min.png" alt="Иван Иванов" class="authors__img">
+                    </div>
+                    <div class="authors__person">
+                        <img src="./img/authors/author-5-min.png" alt="Иван Иванов" class="authors__img">
+                    </div>
+                    <div class="authors__person">
+                        <img src="./img/authors/author-2-min.png" alt="Иван Иванов" class="authors__img">
+                    </div>
+                </div>
+            </article>
+            <!-- Authors end-->
+        </main>
+        <article id="subscription" class="subscription subscription_position">
+            <h5 class="title subscription__title">Подпишитесь на рассылку рецептов и советов</h5>
+            <form action="#!" class="subscription__form">
+                <input required type="email" name="email-input" maxlength="50" placeholder="Адрес электронной почты"
+                    class="select-form__standart subscription__email">
+                <input type="submit" class="subscription__button" value=">">
+            </form>
+        </article>
+        <footer id="footer" class="footer content_center footer_color">
+            <ul class="footer__menu">
+                <li class="footer__menu-item">
+                    <a href="#header" class="footer__menu-link js-scroll">Главная</a>
+                </li>
+                <li class="footer__menu-item">
+                    <a href="#recipes" class="footer__menu-link js-scroll">Рецепты</a>
+                </li>
+                <li class="footer__menu-item">
+                    <a href="#!" class="footer__menu-link other-page">Идеи</a>
+                </li>
+                <li class="footer__menu-item">
+                    <a href="#!" class="footer__menu-link other-page">Журнал</a>
+                </li>
+                <li class="footer__menu-item">
+                    <a href="#!" class="footer__menu-link other-page">Авторы</a>
+                </li>
+                <li class="footer__menu-item">
+                    <a href="#!" class="footer__menu-link other-page">Реклама</a>
+                </li>
+                <li class="footer__menu-item">
+                    <a href="#!" class="footer__menu-link other-page">FAQ</a>
+                </li>
+            </ul>
+            <div class="social social_position2">
+                <a class="social__link" href="#!">
+                    <img src="./img/icons/vk_icon-min.png" alt="vk" class="social__icon">
+                </a>
+                <a class="social__link" href="#!">
+                    <img src="./img/icons/facebook_icon-min.png" alt="facebook" class="social__icon">
+                </a>
+                <a class="social__link" href="#!">
+                    <img src="./img/icons/instagram_icon-min.png" alt="instagram" class="social__icon">
+                </a>
+                <a class="social__link" href="#!">
+                    <img src="./img/icons/google_icon-min.png" alt="google" class="social__icon">
+                </a>
+            </div>
+        </footer>
+        <a href="#nav" class="menu__open-1024 js-scroll">
+            <img src="./img/icons/menu_btn-icon-min.png" alt="menu open" class="menu__open-1024-img">
+        </a>
+    </div>
+</body>
+
+</html>
